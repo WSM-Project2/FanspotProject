@@ -1,0 +1,153 @@
+nav {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.nav-main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-main-container img {
+    width: 160px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+}
+
+.nav-link {
+    color: #8A2BE2;
+}
+
+.tap-list {
+    margin-top: 30px;
+    gap: 30px;
+    display: flex;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    background-color: #f7f7f7;
+    padding: 10px 40px;
+    justify-content: space-between;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.search-container input {
+    border: none;
+    background: none;
+    outline: none;
+    width: 300px;
+}
+
+.search-container button {
+    border: none;
+    outline: none;
+    background-color: #f5f5f5;
+    color: #A9A9A9;
+    font-size: 15px;
+}
+
+.tap-item a {
+    color: #8A2BE2;
+    font-size: 18px;
+}
+
+.tap-item a:hover {
+    font-weight: 600;
+}
+
+.nav-list a:hover {
+    font-weight: 600;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    /* 전체 네비게이션 컨테이너 */
+    .nav-main-container {
+        flex-wrap: wrap; /* 줄 바꿈 */
+        gap: 15px; /* 요소 간격 */
+        padding: 10px;
+        /* border-bottom: 1px solid rgba(138, 43, 226, 0.2); 하단 경계선 추가 */
+    }
+
+    .nav-link {
+        color: white;
+    }
+
+    /* 검색창 */
+    .search-container {
+        flex: 1 1 100%; /* 검색창 전체 너비 */
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /* 메뉴 리스트 */
+    .nav-list {
+        position: absolute;
+        top: -200%; /* 숨기기 */
+        left: 0;
+        right: 0;
+        flex-direction: column; /* 세로 정렬 */
+        background-color: #8A2BE2;
+        padding: 15px 0;
+        border-radius: 0 0 10px 10px; /* 둥근 모서리 */
+        opacity: 0; /* 기본 상태에서 투명 */
+        z-index: -1; /* 숨기기 */
+    }
+
+    /* 메뉴 리스트 활성화 (보일 때) */
+    .nav-list.show-menu {
+        top: 180px; /* 햄버거 메뉴 아래로 위치 */
+        opacity: 1; /* 보이기 */
+        z-index: 10;
+    }
+
+    /* 메뉴 아이템 */
+    .nav-item {
+        padding: 12px 20px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 메뉴 아이템 경계선 */
+    }
+
+    .nav-item:last-child {
+        border-bottom: none; /* 마지막 아이템은 경계선 제거 */
+    }
+
+    .nav-link:hover {
+        font-weight: 600;
+        transition: color 0.3s ease; /* 색 전환 부드럽게 */
+    }
+
+    /* 햄버거 버튼 */
+    .nav-toggle {
+        display: block; /* 모바일에서만 보임 */
+        font-size: 24px;
+        cursor: pointer;
+        color: #8a2be2; /* 보라색 아이콘 */
+        transition: color 0.3s ease;
+    }
+
+    .nav-toggle:hover {
+        color: #4c0080; /* 더 어두운 보라색 */
+    }
+
+    /* 탭 리스트 (모바일에서 숨김) */
+    .tap-list {
+        display: none;
+    }
+}
