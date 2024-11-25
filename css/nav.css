@@ -1,3 +1,7 @@
+body {
+    background-color: #EEEEEE;
+}
+
 nav {
     width: 100%;
     background-color: white;
@@ -17,7 +21,7 @@ nav {
 
 .nav-list {
     display: flex;
-    gap: 30px;
+    gap: 3vh;
     font-size: 18px;
 }
 
@@ -73,7 +77,7 @@ nav {
     display: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 930px) {
     /* 전체 네비게이션 컨테이너 */
     .nav-main-container {
         flex-wrap: wrap; /* 줄 바꿈 */
