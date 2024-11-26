@@ -39,8 +39,7 @@ nav {
     display: flex;
     gap: 10px;
     background-color: #f7f7f7;
-    padding: 10px 40px;
-    justify-content: space-between;
+    padding: 10px 20px;
     border-radius: 8px;
     font-size: 12px;
 }
@@ -77,27 +76,31 @@ nav {
     display: none;
 }
 
+/* 모바일 반응형 수정 */
 @media screen and (max-width: 930px) {
-    /* 전체 네비게이션 컨테이너 */
-    .nav-main-container {
-        flex-wrap: wrap; /* 줄 바꿈 */
-        gap: 15px; /* 요소 간격 */
-        padding: 10px;
-        /* border-bottom: 1px solid rgba(138, 43, 226, 0.2); 하단 경계선 추가 */
-    }
-
     .nav-link {
         color: white;
     }
 
-    /* 검색창 */
-    .search-container {
-        flex: 1 1 100%; /* 검색창 전체 너비 */
-        display: flex;
-        justify-content: space-between;
+    .nav-main-container {
+        flex-wrap: wrap; /* 줄 바꿈 */
+        gap: 15px;
+        padding: 10px;
+        justify-content: space-between; /* 양 끝으로 정렬 */
     }
 
-    /* 메뉴 리스트 */
+    .search-container {
+        flex: 1 1 100%; /* 전체 너비 */
+        display: flex;
+        gap: 10px;
+        padding: 8px;
+    }
+
+    .search-container input {
+        width: 100%; /* 입력 창이 화면에 맞게 */
+        font-size: 14px; /* 글씨 크기 축소 */
+    }
+
     .nav-list {
         position: absolute;
         top: -200%; /* 숨기기 */
@@ -105,53 +108,37 @@ nav {
         right: 0;
         flex-direction: column; /* 세로 정렬 */
         background-color: #8A2BE2;
-        padding: 15px 0;
-        border-radius: 0 0 10px 10px; /* 둥근 모서리 */
-        opacity: 0; /* 기본 상태에서 투명 */
-        z-index: -1; /* 숨기기 */
+        padding: 10px 0;
+        border-radius: 0 0 10px 10px;
+        opacity: 0; 
+        z-index: -1;
+        /* transition: all 0.3s ease; */
     }
 
-    /* 메뉴 리스트 활성화 (보일 때) */
     .nav-list.show-menu {
-        top: 180px; /* 햄버거 메뉴 아래로 위치 */
-        opacity: 1; /* 보이기 */
+        top: 196px; /* 햄버거 메뉴 아래로 위치 */
+        opacity: 0.9;
         z-index: 10;
     }
 
-    /* 메뉴 아이템 */
     .nav-item {
         padding: 12px 20px;
-        text-align: center;
-        font-size: 16px;
-        font-weight: 500;
+        font-size: 14px; /* 작은 글씨 */
         color: white;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* 메뉴 아이템 경계선 */
     }
 
-    .nav-item:last-child {
-        border-bottom: none; /* 마지막 아이템은 경계선 제거 */
-    }
-
-    .nav-link:hover {
-        font-weight: 600;
-        transition: color 0.3s ease; /* 색 전환 부드럽게 */
-    }
-
-    /* 햄버거 버튼 */
     .nav-toggle {
-        display: block; /* 모바일에서만 보임 */
+        display: block;
         font-size: 24px;
         cursor: pointer;
-        color: #8a2be2; /* 보라색 아이콘 */
-        transition: color 0.3s ease;
+        color: #8A2BE2;
     }
 
-    .nav-toggle:hover {
-        color: #4c0080; /* 더 어두운 보라색 */
-    }
-
-    /* 탭 리스트 (모바일에서 숨김) */
     .tap-list {
         display: none;
+    }
+
+    .search-container input::placeholder {
+        font-size: 85%; /* 더 작은 크기 */
     }
 }
