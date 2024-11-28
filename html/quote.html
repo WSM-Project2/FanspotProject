@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/img/letter-f.png" type="icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <title>Fanspot</title>
-
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/quote.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -110,9 +113,35 @@
 
             </div>
         </div>
+
+        <div class="res-container">
+            <!-- 시세 정보 영역 -->
+            <div class="price-info-container">
+                <h2 class="price-info-title">시세 정보</h2>
+                <p class="price-info-description" id="priceDescription">상품명을 입력하면 시세 정보가 표시됩니다.</p>
+                <div class="price-details">
+                    <p>평균 가격: <span id="avgPrice">-</span>원</p>
+                    <p>최고 가격: <span id="maxPrice">-</span>원</p>
+                    <p>최저 가격: <span id="minPrice">-</span>원</p>
+                </div>
+                <div class="price-chart" id="priceChart">
+                    <canvas id="priceChart" width="400" height="200"></canvas>
+                </div>
+            </div>
+
+            <!-- 상품 목록 -->
+            <div class="product-list-container">
+                <h2 class="product-list-title">관련 상품</h2>
+                <ul class="product-list" id="productList">
+                    <!-- 상품 목록 (JS로 추가 예정) -->
+                </ul>
+            </div>
+        </div>
     </main>
 
-
+    <script src="/js/chart.js"></script>
+    <script src="/js/quote.js"></script>
     <script src="/js/nav.js"></script>
 </body>
+
 </html>
