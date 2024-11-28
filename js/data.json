@@ -6,7 +6,8 @@
         "info": "최근에 샀는데.. 다른 거 사려고요. 그래서 팔아요. 사용도 별로 안 했고, 깨끗해요!",
         "img": "image-1.png",
         "status": "new",
-        "user": "멍멍이팬"
+        "user": "멍멍이팬",
+        "linkd": true
     },
     {
         "name": "핫소스 티셔츠",
@@ -15,7 +16,8 @@
         "info": "최근에 선물 받았는데 제 취향 아니라서 팔아요. 허락은 받았습니다.",
         "img": "image-5.png",
         "status": "new",
-        "user": "티셔츠광"
+        "user": "티셔츠광",
+        "linkd": true
     },
     {
         "name": "핫소스 떡메",
@@ -24,7 +26,8 @@
         "info": "부산가서 샀는데 필요 없어서 팔아요.",
         "img": "image-4.png",
         "status": "new",
-        "user": "부산덕후"
+        "user": "부산덕후",
+        "linkd": true
     },
     {
         "name": "핫소스 회색 후드티",
