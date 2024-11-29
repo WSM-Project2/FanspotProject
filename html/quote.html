@@ -7,7 +7,6 @@
     <link rel="shortcut icon" href="/img/letter-f.png" type="icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <title>Fanspot</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/quote.css">
@@ -82,56 +81,51 @@
         <!-- 최근 검색한 시세 -->
         <div class="recent-search-container">
             <h2 class="recent-search-title">최근 검색한 시세</h2>
-            <div class="recent-search-wrapper">
-                <!-- js로 위 인풋에 입력한 데이터 받아옴 -->
-                <button class="recent-search-clear">삭제하기</button>
-            </div>
+            <button class="recent-search-clear">삭제하기</button>
+        </div>
+        <div class="recent-search-wrapper">
+            <!-- js로 위 인풋에 입력한 데이터 받아옴 -->
+            <div class="recent-item">하이</div>
         </div>
 
         <!-- 인기 시세 -->
         <div class="popular-prices-container">
             <h2 class="popular-prices-title">인기 시세</h2>
             <div class="popular-prices-wrapper">
-
                 <!-- 실시간 시세 조회 -->
                 <div class="realtime-prices">
-                    <h3 class="realtime-prices-title">실시간 시세조회</h3>
+                    <h3 class="prices-title">실시간 시세조회</h3>
                     <ul class="realtime-prices-list">
                         <!-- 실시간 시세 js로 불러올거임 -->
                         <!-- 추가 항목 -->
                     </ul>
                 </div>
-
                 <!-- 인기 시세 -->
                 <div class="popular-prices">
-                    <h3 class="popular-prices-title">인기 시세</h3>
+                    <h3 class="prices-title">인기 시세</h3>
                     <ul class="popular-prices-list">
                         <!-- js로 인기 시세 json 불러옴 -->
                         <!-- 추가 항목 -->
                     </ul>
                 </div>
-
             </div>
         </div>
 
         <div class="res-container">
             <!-- 시세 정보 영역 -->
+            <div class="price-chart-container">
+                <canvas id="priceChart" width="400" height="200"></canvas>
+            </div>
             <div class="price-info-container">
-                <h2 class="price-info-title">시세 정보</h2>
-                <p class="price-info-description" id="priceDescription">상품명을 입력하면 시세 정보가 표시됩니다.</p>
                 <div class="price-details">
                     <p>평균 가격: <span id="avgPrice">-</span>원</p>
                     <p>최고 가격: <span id="maxPrice">-</span>원</p>
                     <p>최저 가격: <span id="minPrice">-</span>원</p>
                 </div>
-                <div class="price-chart" id="priceChart">
-                    <canvas id="priceChart" width="400" height="200"></canvas>
-                </div>
             </div>
 
             <!-- 상품 목록 -->
             <div class="product-list-container">
-                <h2 class="product-list-title">관련 상품</h2>
                 <ul class="product-list" id="productList">
                     <!-- 상품 목록 (JS로 추가 예정) -->
                 </ul>
@@ -139,6 +133,7 @@
         </div>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/js/chart.js"></script>
     <script src="/js/quote.js"></script>
     <script src="/js/nav.js"></script>

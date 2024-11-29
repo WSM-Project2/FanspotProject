@@ -1,3 +1,198 @@
+main {}
+
+.q-search-container {
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.q-search-title {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.q-search-description {
+    color: #373737;
+    margin-bottom: 10px;
+}
+
+.q-search-wrapper {
+    padding: 8px 10px;
+    background-color: white;
+    border-radius: 100px;
+    border: solid 1px #dbdbdb;
+    padding-left: 20px;
+}
+
+.q-search-input {
+    border: none;
+    width: 500px;
+    font-size: 15px;
+}
+
+input {
+    all: unset; /* 모든 기본 스타일 초기화 */
+    box-sizing: border-box; /* 크기 계산에 패딩과 테두리 포함 */
+}
+
+.q-search-button {
+    border: none;
+    background: black;
+    color: white;
+    padding: 10px 11px;
+    border-radius: 100px;
+}
+
+.recent-search-container {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 100px;
+    border-bottom: solid 1px #b0b0b0;
+    margin-top: 50px;
+    /* margin-bottom: 10px; */
+}
+
+.recent-search-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #7e7e7e;
+}
+
+.recent-search-clear {
+    border: none;
+    background: none;
+    color: #7e7e7e;
+}
+
+.recent-search-clear:hover {
+    font-weight: 800;
+}
+
+.recent-item {
+    margin-inline: 100px;
+    margin-top: 10px;
+    background-color: white;
+    padding: 5px 5px;
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    border-radius: 100px;
+    border: solid 1px #dbdbdb;
+    font-size: 12px;
+}
+
+.popular-prices-container {
+    margin-top: 70px;
+    margin-inline: 100px;
+}
+
+.popular-prices-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #7e7e7e;
+    border-bottom: solid 1px #b0b0b0;
+}
+
+.popular-prices-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.realtime-prices,
+.popular-prices {
+    background-color: white;
+    width: 49%;
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 8px;
+    border: solid 1px #b0b0b0;
+}
+
+.popular-prices-container h3 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #7e7e7e;
+    margin-bottom: 12px;
+}
+
+.realtime-prices-list,
+.popular-prices-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-auto-flow: column;
+    gap: 12px;
+}
+
+.realtime-prices-list li,
+.popular-prices-list li {
+    display: flex;
+    align-items: center;
+}
+
 .res-container {
-    display: none;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+.price-chart-container {
+    width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 1px #b0b0b0;
+    padding: 10px;
+}
+
+.price-info-container {
+    margin-top: 30px;
+    align-items: center; /* 수직 정렬 */
+    background-color: #8A2BE2; /* 배경색 */
+    padding: 20px 40px; /* 내부 여백 */
+    border-radius: 10px; /* 둥근 모서리 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+}
+
+.price-details {
+    display: flex; /* 플렉스 컨테이너 */
+    gap: 5px; /* 요소 간 간격 */
+    font-size: 16px; /* 글꼴 크기 */
+    color: white; /* 글자 색 */
+    display: flex; /* 플렉스 컨테이너 */
+    gap: 150px;
+}
+
+.price-details p {
+    font-weight: 400; /* 글자 강조 */
+}
+
+.price-details span {
+    font-weight: 800; /* 글자 강조 */
+}
+
+.product-list-container {
+    margin-top: 30px;
+}
+
+.product-list-container ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 30px;
+    width: 900px;
+}
+
+.product-list li {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+}
+
+.product-list img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-list .product-info {
+    padding: 10px;
+    text-align: center;
 }
