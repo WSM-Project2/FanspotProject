@@ -300,7 +300,6 @@ input {
     }
 }
 
-/* 아주 작은 화면 (ex. 모바일 화면 크기) */
 @media screen and (max-width: 600px) {
     .q-search-input {
         width: 100%;
