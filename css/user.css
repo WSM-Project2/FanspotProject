@@ -1,0 +1,95 @@
+/* 메인 카드 */
+.profile-card {
+    position: relative;
+    top: 20px;
+    margin: 80px auto 0;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+    padding: 30px; /* 카드 길이를 살짝 늘리기 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* 프로필 섹션 */
+.profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #f7f7f7;
+    object-fit: cover; /* 비율 유지하며 사진 뭉개짐 방지 */
+    margin-bottom: 15px;
+}
+
+.user-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* 버튼 섹션 */
+.card-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+}
+
+.card-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    width: 120px;
+    height: 100px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-button i {
+    font-size: 1.8rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.card-button span {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* 반응형 */
+@media screen and (max-width: 768px) {
+    .card-buttons {
+        gap: 10px; /* 간격 축소 */
+    }
+
+    .card-button {
+        width: 100px; /* 버튼 크기 축소 */
+        height: 90px;
+    }
+
+    .card-button i {
+        font-size: 1.5rem;
+    }
+
+    .card-button span {
+        font-size: 0.9rem;
+    }
+}
