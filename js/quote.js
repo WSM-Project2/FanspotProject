@@ -1,3 +1,22 @@
+document.querySelector('.q-search-button').addEventListener('click', function() {
+    const searchQuery = document.querySelector('.q-search-input').value.trim();
+    
+    // 검색어가 비어있지 않다면
+    if (searchQuery) {
+        // start-container 숨기기
+        document.querySelector('.start-container').style.display = 'none';
+        
+        // res-container 보이기
+        document.querySelector('.res-container').style.display = 'block';
+        
+        // 검색어 처리 (예: 검색 결과에 해당하는 데이터 로딩)
+        handleSearchResults(searchQuery);
+        
+        // 최근 검색 목록에 추가
+        addRecentSearch(searchQuery);
+    }
+});
+
 // 로컬 JSON 파일 로드 및 렌더링
 async function renderPrices() {
     try {
@@ -112,3 +131,22 @@ async function loadProductList() {
 
 // 페이지 로드 시 실행
 document.addEventListener("DOMContentLoaded", loadProductList);
+
+function addRecentSearch(query) {
+    const recentSearchContainer = document.querySelector('.recent-search-wrapper');
+    const recentItem = document.createElement('div');
+    recentItem.className = 'recent-item';
+    recentItem.textContent = query;
+
+    // 클릭 시 해당 검색어를 삭제
+    recentItem.addEventListener('click', function() {
+        recentSearchContainer.removeChild(recentItem);
+    });
+
+    recentSearchContainer.appendChild(recentItem);
+}
+
+// 삭제 버튼 처리
+document.querySelector('.recent-search-clear').addEventListener('click', function() {
+    document.querySelector('.recent-search-wrapper').innerHTML = ''; // 최근 검색어 삭제
+});

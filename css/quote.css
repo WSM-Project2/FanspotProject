@@ -1,4 +1,6 @@
-main {}
+.res-container {
+    display: none;
+}
 
 .q-search-container {
     justify-items: center;
@@ -30,8 +32,10 @@ main {}
 }
 
 input {
-    all: unset; /* 모든 기본 스타일 초기화 */
-    box-sizing: border-box; /* 크기 계산에 패딩과 테두리 포함 */
+    all: unset;
+    /* 모든 기본 스타일 초기화 */
+    box-sizing: border-box;
+    /* 크기 계산에 패딩과 테두리 포함 */
 }
 
 .q-search-button {
@@ -83,6 +87,7 @@ input {
 .popular-prices-container {
     margin-top: 70px;
     margin-inline: 100px;
+    margin-bottom: 30px;
 }
 
 .popular-prices-title {
@@ -144,32 +149,45 @@ input {
 
 .price-info-container {
     margin-top: 30px;
-    align-items: center; /* 수직 정렬 */
-    background-color: #8A2BE2; /* 배경색 */
-    padding: 20px 40px; /* 내부 여백 */
-    border-radius: 10px; /* 둥근 모서리 */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 부드러운 그림자 */
+    align-items: center;
+    /* 수직 정렬 */
+    background-color: #8A2BE2;
+    /* 배경색 */
+    padding: 20px 80px;
+    /* 내부 여백 */
+    border-radius: 10px;
+    /* 둥근 모서리 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* 부드러운 그림자 */
 }
 
 .price-details {
-    display: flex; /* 플렉스 컨테이너 */
-    gap: 5px; /* 요소 간 간격 */
-    font-size: 16px; /* 글꼴 크기 */
-    color: white; /* 글자 색 */
-    display: flex; /* 플렉스 컨테이너 */
+    display: flex;
+    /* 플렉스 컨테이너 */
+    gap: 5px;
+    /* 요소 간 간격 */
+    font-size: 16px;
+    /* 글꼴 크기 */
+    color: white;
+    /* 글자 색 */
+    display: flex;
+    /* 플렉스 컨테이너 */
     gap: 150px;
 }
 
 .price-details p {
-    font-weight: 400; /* 글자 강조 */
+    font-weight: 400;
+    /* 글자 강조 */
 }
 
 .price-details span {
-    font-weight: 800; /* 글자 강조 */
+    font-weight: 800;
+    /* 글자 강조 */
 }
 
 .product-list-container {
     margin-top: 30px;
+    font-size: 12px;
 }
 
 .product-list-container ul {
