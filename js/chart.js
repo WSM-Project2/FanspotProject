@@ -22,8 +22,8 @@ async function createChart() {
             datasets: [{
                 label: '가격 (원)',
                 data: prices,
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                borderColor: 'rgba(54, 162, 235, 1)',
+                backgroundColor: 'rgba(138, 43, 226, 0.2)',  // 투명도가 0.2인 보라색
+                borderColor: 'rgba(138, 43, 226, 1)',        // 불투명한 보라색
                 borderWidth: 1
             }]
         },
@@ -32,7 +32,7 @@ async function createChart() {
                 y: {
                     beginAtZero: true,
                     ticks: {
-                        callback: function(value) {
+                        callback: function (value) {
                             return value.toLocaleString(); // 숫자 쉼표로 구분
                         }
                     }

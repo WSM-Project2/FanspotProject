@@ -214,3 +214,112 @@ input {
     padding: 10px;
     text-align: center;
 }
+
+/* 모바일 반응형 스타일 */
+@media screen and (max-width: 980px) {
+    main {
+        padding: 10px;
+    }
+
+    .q-search-container {
+        margin-top: 20px;
+        padding: 0 15px;
+    }
+
+    .q-search-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        /* 검색 래퍼 너비를 100%로 설정 */
+    }
+
+    .recent-search-container {
+        /* 세로로 배치 */
+        margin-inline: 0;
+        margin-top: 30px;
+        /* 상단 여백 줄이기 */
+    }
+
+    .recent-item {
+        width: 20%;
+        /* 최근 검색 항목의 너비를 100%로 */
+        margin-inline: 0;
+        margin-top: 10px;
+        padding: 8px;
+    }
+
+    .popular-prices-container {
+        margin-inline: 0;
+        /* 양쪽 여백 없애기 */
+        margin-top: 30px;
+        /* 여백 줄이기 */
+    }
+
+    .popular-prices-wrapper {
+        flex-direction: column;
+        /* 세로로 배치 */
+    }
+
+    .realtime-prices,
+    .popular-prices {
+        width: 100%;
+        /* 너비를 100%로 */
+        margin-top: 15px;
+    }
+
+    .product-list-container ul {
+        grid-template-columns: repeat(2, 1fr);
+        /* 두 열로 변경 */
+        width: 100%;
+        /* 너비 100%로 */
+    }
+
+    .product-list li {
+        font-size: 14px;
+        /* 제품 리스트 항목 크기 줄이기 */
+    }
+
+    .price-chart-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /* 차트 컨테이너 너비를 100%로 */
+    }
+
+    .price-info-container {
+        padding: 15px 30px;
+        /* 내부 여백 줄이기 */
+        font-size: 14px;
+        /* 글자 크기 줄이기 */
+    }
+
+    .price-details {
+        gap: 20px;
+        font-size: 130%;
+        /* 세부 가격 정보 간 간격 줄이기 */
+    }
+}
+
+/* 아주 작은 화면 (ex. 모바일 화면 크기) */
+@media screen and (max-width: 600px) {
+    .q-search-input {
+        width: 100%;
+        font-size: 12px;
+        /* 글자 크기 더 줄이기 */
+    }
+
+    .product-list-container ul {
+        grid-template-columns: repeat(2, 1fr);
+        /* 한 열로 변경 */
+    }
+
+    .price-info-container {
+        padding: 15px 20px;
+        font-size: 12px;
+    }
+
+    .price-details {
+        gap: 10px;
+        /* 더 간격 좁히기 */
+    }
+}
