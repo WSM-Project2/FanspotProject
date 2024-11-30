@@ -268,7 +268,7 @@ input {
     }
 
     .product-list-container ul {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         /* 두 열로 변경 */
         width: 100%;
         /* 너비 100%로 */
