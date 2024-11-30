@@ -16,6 +16,11 @@ async function loadWishlist() {
   }
 }
 
+document.querySelector(".celebrity-btn").addEventListener("click", function(event) {
+    // event.preventDefault(); // 페이지 이동을 막지 않음
+    window.location.href = "http://127.0.0.1:5500/html/star.html"; // 페이지 이동
+});
+
 function renderWishlist(items) {
   wishlistItems.innerHTML = ''; // 기존 콘텐츠 초기화
   items.forEach(item => {

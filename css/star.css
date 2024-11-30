@@ -1,0 +1,144 @@
+/* 전체 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* 네브바 */
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+/* 메인 컨테이너 */
+#my-page {
+    padding: 20px;
+}
+
+.my-stars {
+    text-align: center; /* 제목 가운데 정렬 */
+}
+
+.star-icons {
+    display: flex; /* 요소들을 가로로 정렬 */
+    justify-content: center; /* 요소들을 중앙 정렬 */
+    gap: 20px; /* 각 아이템 간격 */
+}
+
+.star-item {
+    text-align: center; /* 이미지와 이름을 중앙 정렬 */
+}
+
+.star-icons img {
+    width: 100px; /* 이미지 크기 설정 */
+    height: 100px; /* 이미지 비율 유지 */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* 상품 섹션 공통 */
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.product-card {
+    width: calc(16.6667% - 16px); /* 한 줄에 6개 (100% / 6) */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    padding-bottom: 70px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+.product-card .product-info {
+    margin-top: 10px;
+}
+
+.product-card .product-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.product-card .product-price {
+    font-size: 14px;
+    color: #666;
+}
+/* 추천 상품 섹션 */
+.recommended-products {
+    margin-bottom: 40px;
+}
+
+.recommended-products h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.recommended-products .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.recommended-products .product-card {
+    width: calc(25% - 16px); /* 4개 상품이 한 줄에 나올 수 있도록 25% */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    padding-bottom: 70px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.recommended-products .product-card img {
+    width: 100%;
+    height: 100%; /* 정사각형 크기를 위해 높이와 너비를 100%로 설정 */
+    border-radius: 10px;
+    object-fit: cover; /* 이미지 비율에 맞게 잘라서 채움 */
+    aspect-ratio: 1; /* 정사각형 비율을 유지 */
+}
+
+.recommended-products .product-card .product-info {
+    margin-top: 10px;
+}
+
+.recommended-products .product-card .product-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.recommended-products .product-card .product-price {
+    font-size: 14px;
+    color: #666;
+}
