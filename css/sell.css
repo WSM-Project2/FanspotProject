@@ -1,3 +1,4 @@
+/* 기본 스타일 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -48,6 +49,7 @@ body {
     font-size: 16px;
     cursor: pointer;
 }
+
 .image-preview {
     margin: 20px 0;
     text-align: center;
@@ -64,32 +66,62 @@ body {
 .register-btn:hover {
     background-color: #0056b3;
 }
-/* 알림 메시지 스타일 */
-.notification {
-    position: fixed;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #9000ff;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+
+/* 반응형 스타일 */
+
+/* 모바일 및 작은 화면에서 폼 요소 간격을 좁힘 */
+@media (max-width: 600px) {
+    .sell-container {
+        padding: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    .register-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .image-preview img {
+        max-height: 150px; /* 모바일에서는 이미지를 좀 더 작게 표시 */
+    }
 }
 
-/* 이미지 미리보기 */
-.image-preview {
-    margin: 20px 0;
-    text-align: center;
+/* 태블릿 화면 크기에서 폼 간격을 조정 */
+@media (max-width: 768px) {
+    .sell-container {
+        max-width: 80%;
+        padding: 18px;
+    }
+
+    .register-btn {
+        font-size: 15px;
+    }
+
+    .image-preview img {
+        max-height: 180px; /* 태블릿에서 약간 큰 미리보기 */
+    }
 }
 
-.image-preview img {
-    max-width: 100%;
-    max-height: 200px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: block;
+/* 데스크탑 화면 크기에서 최대 크기 유지 */
+@media (min-width: 1024px) {
+    .sell-container {
+        max-width: 500px; /* 데스크탑에서는 원래 크기 유지 */
+        padding: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .register-btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .image-preview img {
+        max-height: 200px;
+    }
 }
