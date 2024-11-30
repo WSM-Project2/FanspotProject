@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,9 @@
 
     <link rel="stylesheet" href="/css/nav.css">
     <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -66,10 +69,47 @@
     </header>
 
     <main>
-        
+        <div class="famous-person-container">
+            <h1>나의 유명인</h1>
+            <div class="famous-person-items">
+                <div class="famous-person-item">
+                    <!-- js으로 아이템 가져오기 -->
+                </div>
+                <button class="famous-person-add"><i class="bi bi-grid-fill"></i></button>
+            </div>
+        </div>
+
+        <div class="new-goods-container">
+            <h1>새로운 등록된 상품</h1>
+            <div class="new-goods-item">
+                <!-- js으로 아이템 가져오기 -->
+            </div>
+        </div>
+
+        <div class="push-conatiner">
+            <h1>추천 상품</h1>
+            <div class="push-item">
+                <!-- js으로 아이템 가져오기 -->
+            </div>
+        </div>
     </main>
 
+    <!-- 상품 클릭 시 뜨는 모달 (카드 형태) -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-content">
+            <span class="close-button" id="closeModal">&times;</span>
+            <h2 class="modal-title">상품명 (JSON으로 대체)</h2>
+            <img src="" alt="상품 이미지" class="modal-image">
+            <p class="modal-description">상품 설명 (JSON으로 대체)</p>
+            <p class="modal-price">가격: <span class="price-value">₩0 (JSON으로 대체)</span></p>
+            <p class="modal-user"></p>
+            <button class="chat-button"><a href="/html/chat.html">채팅하기</a></button>
+        </div>
+    </div>
 
+
+    <script src="/js/index.js"></script>
     <script src="/js/nav.js"></script>
 </body>
+
 </html>
