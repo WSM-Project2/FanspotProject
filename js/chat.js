@@ -23,6 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
         chatMessages.scrollTop = chatMessages.scrollHeight;
     };
 
+    let currentResponseIndex = 0; // 현재 응답 인덱스를 추적하는 변수
+
     // 사용자 메시지 처리
     const handleMessage = () => {
         const message = userInput.value.trim();
@@ -34,9 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // AI 응답 추가
         setTimeout(() => {
-            const randomResponse =
-                aiResponses[Math.floor(Math.random() * aiResponses.length)];
-            addMessage(randomResponse, "ai");
+            if (currentResponseIndex < aiResponses.length) {
+                const response = aiResponses[currentResponseIndex];
+                addMessage(response, "ai");
+                currentResponseIndex++; // 응답 인덱스 증가
+            }
         }, 500); // 응답 딜레이
     };
 

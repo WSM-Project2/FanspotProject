@@ -16,13 +16,13 @@ main {
 }
 
 .famous-person-container h1 {
-    font-size: 30px;
+    font-size: 27px;
     padding-bottom: 10px;
 }
 
 .famous-person-items {
     display: flex;
-    gap: 30px;
+    gap: 25px;
 }
 
 .card-title {
@@ -38,12 +38,13 @@ main {
 
 .famous-person-add {
     font-size: 50px;
-    height: 160px;
-    width: 160px;
+    height: 140px;
+    width: 140px;
     border-radius: 10px;
     border: none;
     background: none;
     background-color: #8A2BE2;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 .famous-person-add i {
@@ -60,7 +61,7 @@ main {
 }
 
 .new-goods-container h1 {
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 20px;
     color: #333;
     font-weight: bold;
@@ -71,7 +72,18 @@ main {
     gap: 20px;
     flex-wrap: wrap;
     justify-content: flex-start;
-    /* background-color: white; */
+}
+
+.new-goods-item .card-title {
+    font-size: 14px;
+}
+
+.new-goods-item .card-price {
+    font-size: 14px;
+}
+
+.new-goods-item .card-user {
+    font-size: 12px;
 }
 
 .new-goods-item div {
@@ -79,8 +91,8 @@ main {
     border-radius: 10px;
     border: solid 1px #c4c4c4;
     padding: 10px 10px;
+    height: 240px;
     width: 150px;
-    height: 260px;
 }
 
 /* 추천 상품 섹션 */
@@ -238,4 +250,109 @@ main {
 
 .buy-button:hover, .chat-button:hover {
     background-color: #7a25c7;
+}
+
+/* 모바일 대응: 최대 768px */
+@media (max-width: 768px) {
+    main {
+        padding: 15px;
+    }
+
+    .famous-person-container h1, 
+    .new-goods-container h1, 
+    .push-conatiner h1 {
+        font-size: 20px;
+    }
+
+    .famous-person-items, .push-item {
+        /* flex-wrap: wrap; */
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .famous-person-add {
+        height: 120px;
+        width: 120px;
+        font-size: 40px;
+    }
+
+    /* 새로운 상품 섹션: 가로 스크롤 추가 */
+    .new-goods-item {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 20px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .new-goods-item div {
+        min-width: 150px;
+        height: 240px;
+        flex: 0 0 auto;
+    }
+
+    /* 추천 상품 섹션: 비율 유지 */
+    .push-item {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+
+    .card-img {
+        height: 120px;
+    }
+
+    .card-title, .card-price, .card-user {
+        font-size: 14px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .modal-image {
+        height: 150px;
+    }
+}
+
+/* 태블릿 대응: 최대 1024px */
+@media (max-width: 1024px) {
+    .famous-person-items {
+        gap: 20px;
+    }
+
+    .new-goods-item {
+        overflow-x: auto;
+    }
+
+    .famous-person-add {
+        height: 130px;
+        width: 130px;
+        font-size: 45px;
+    }
+
+    .card-img {
+        height: 130px;
+    }
+
+    .modal-content {
+        width: 70%;
+    }
+}
+
+/* 데스크톱 작은 화면: 최대 1280px */
+@media (max-width: 1280px) {
+    .new-goods-item {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .famous-person-add {
+        height: 140px;
+        width: 140px;
+        font-size: 50px;
+    }
+
+    .card-img {
+        height: 140px;
+    }
 }
