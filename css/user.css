@@ -1,95 +1,125 @@
-/* 메인 카드 */
-.profile-card {
-    position: relative;
-    top: 20px;
-    margin: 80px auto 0;
-    background: #fff;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 800px;
-    padding: 30px; /* 카드 길이를 살짝 늘리기 */
+/* 전체 중앙 정렬 */
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #EEEEEE; /* 배경색 */
 }
 
-/* 프로필 섹션 */
+/* 프로필 섹션 스타일 */
+.profile-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
 .profile-img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 3px solid #f7f7f7;
-    object-fit: cover; /* 비율 유지하며 사진 뭉개짐 방지 */
-    margin-bottom: 15px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* 둥근 프로필 이미지 */
+    border: 3px solid #d9d9d9;
+    object-fit: cover;
+    margin-bottom: 10px;
 }
 
 .user-name {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #333;
+    margin-bottom: 15px;
+}
+
+.celebrity-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #962df3; /* 버튼 색상 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.celebrity-btn:hover {
+    background-color: #641ca3; /* 호버 효과 */
+}
+
+
+h2{
     margin-bottom: 20px;
 }
 
-/* 버튼 섹션 */
-.card-buttons {
+/* 찜한 상품 섹션 */
+.favorite {
+    width: 100%; /* 전체 화면 너비 사용 */
+    max-width: 1400px; /* 넓은 화면에서도 여백 유지 */
+    margin: 40px auto;
+    text-align: center;
+}
+
+.product-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 16px;
     justify-content: center;
-    width: 100%;
 }
 
-.card-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #f9f9f9;
-    border: 2px solid #ddd;
-    border-radius: 10px;
-    width: 120px;
-    height: 100px;
+.product-card {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
     text-align: center;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.card-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-.card-button i {
-    font-size: 1.8rem;
-    color: #555;
-    margin-bottom: 8px;
+.product-info {
+    margin-top: 8px;
 }
 
-.card-button span {
-    font-size: 1rem;
-    color: #333;
+.product-name {
+    font-size: 16px;
     font-weight: bold;
+    color: #333;
 }
 
-/* 반응형 */
-@media screen and (max-width: 768px) {
-    .card-buttons {
-        gap: 10px; /* 간격 축소 */
+.product-price {
+    font-size: 14px;
+    color: #666;
+}
+
+
+/* 반응형 스타일 */
+/* 화면이 좁아지면 3개씩 한 줄에 배치 */
+@media (max-width: 1024px) {
+    .product-container {
+        grid-template-columns: repeat(3, 1fr); /* 3개 한 줄 */
+    }
+}
+
+/* 넓은 화면 (1440px 이상)에서 사진 크게 표시 */
+@media (min-width: 1440px) {
+    .favorite {
+        width: 90%; /* 화면 여백을 최소화 */
+        max-width: 1600px; /* 넓은 화면에서 최대 폭 */
     }
 
-    .card-button {
-        width: 100px; /* 버튼 크기 축소 */
-        height: 90px;
+    .product-container {
+        grid-template-columns: repeat(6, 1fr); /* 6개 한 줄 */
+        gap: 20px; /* 간격 약간 넓게 */
     }
 
-    .card-button i {
-        font-size: 1.5rem;
-    }
-
-    .card-button span {
-        font-size: 0.9rem;
+    .product {
+        aspect-ratio: 1 / 1; /* 정사각형 유지 */
+        width: 110%; /* 사진을 약간 더 크게 */
     }
 }

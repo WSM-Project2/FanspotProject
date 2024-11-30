@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/user.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -62,31 +64,24 @@
     </header>
 
     <main id="my-page">
-        <!-- 메인 카드 -->
-        <section class="profile-card">
+        <!-- 상단 프로필 섹션 -->
+        <section class="profile-section">
             <img src="/img/profile-placeholder.png" alt="프로필 사진" class="profile-img">
             <h2 class="user-name">선우님 반가워요!</h2>
-    
-            <!-- 카드 버튼 -->
-            <div class="card-buttons">
-                <div class="card-button">
-                    <i class="bi bi-box"></i>
-                    <span>구매내역</span>
-                </div>
-                <div class="card-button">
-                    <i class="bi bi-tags"></i>
-                    <span>판매내역</span>
-                </div>
-                <div class="card-button">
-                    <i class="bi bi-heart"></i>
-                    <span>찜한 상품</span>
-                </div>
-            </div>
         </section>
-    </main>    
-    
-
-    <script src="/js/user.js"></script>
+        <a href="http://127.0.0.1:5500/html/star.html">
+            <button class="celebrity-btn">나의 유명인 페이지</button>
+        </a>        
+            <!-- 찜한 상품 섹션 -->
+            <section class="favorite">
+                <h2>찜한 상품 ❤</h2>
+                <div id="product-container" class="product-container">
+                    <!-- 상품 카드가 동적으로 추가됩니다 -->
+                </div>
+            </section>
+        </main>
+        <script src="/js/products.js"></script>
     <script src="/js/nav.js"></script>
 </body>
+
 </html>
