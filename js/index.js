@@ -73,3 +73,30 @@ function openModal(product) {
         modal.style.display = "none";
     });
 }
+
+// 페이지 로드 시 LocalStorage에서 상품을 가져와서 표시
+window.addEventListener('load', function () {
+    const products = JSON.parse(localStorage.getItem('products')) || [];
+    const newGoodsContainer = document.querySelector('.new-goods-item');
+
+    if (products.length > 0) {
+        products.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.classList.add('card'); // 기존 카드와 동일한 클래스 사용
+
+            productCard.innerHTML = `
+                <img class="card-img" src="${product.image}" alt="${product.name}">
+                <h3 class="card-title">${product.name}</h3>
+                <p class="card-price">₩${product.price}</p>
+                <p class="card-user">판매자: ${product.user || '선우'}</p>
+            `;
+
+            // 클릭 이벤트로 모달 표시 (기존 상품과 동일하게)
+            productCard.addEventListener("click", () => {
+                openModal(product);
+            });
+
+            newGoodsContainer.appendChild(productCard);
+        });
+    }
+});
