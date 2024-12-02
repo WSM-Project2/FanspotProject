@@ -9,13 +9,13 @@ wsm 2학기 수행평가 FanSpot입니다
 ## Period ⏱️
 - 2024.10.21 ~ 11.30
 
-## Contributors 👥
-- W [2302김예나](https://github.com/kimyena0602)
-- W [2303나지은](https://github.com/jieun0240)
-
 ## Tools 🛠
 - ```Visual Studio Code```
 - ```Figma```
 
 ## Languages 📖
 - Frontend  👉🏻 ```Html + Css + Js```
+
+## Developer 👩‍💻
+- W [2302김예나](https://github.com/kimyena0602)
+- W [2303나지은](https://github.com/jieun0240)
